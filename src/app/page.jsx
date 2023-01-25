@@ -47,7 +47,7 @@ export default function Home() {
 						alt="The Dude"
 					/>
 
-					<div className="flex items-center justify-center bg-white py-4 sm:py-0 bg-opacity-10 rounded-md overflow-scroll">
+					<div className="flex items-center justify-center bg-white py-4 sm:py-0 bg-opacity-10 rounded-md overflow-y-auto">
 						{!apiOutput ? (
 							<div className="flex justify-center text-lebowski">
 								<p>...</p>
