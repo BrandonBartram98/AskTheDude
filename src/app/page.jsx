@@ -32,15 +32,21 @@ export default function Home() {
 	}
 
 	return (
-		<main className="">
-			<div className="max-w-3xl sm:px-10 flex-col justify-center mx-6 md:mx-auto text-center py-12 font-manrope">
-				<div className="flex justify-center">
-					<h1 className="font-bold tracking-wide text-lebowski text-3xl sm:text-5xl">Ask The Dude</h1>
+		<main className="h-screen">
+			<div className="max-w-3xl sm:px-10 items-center justify-center mx-6 sm:mx-auto text-center pt-6 font-manrope">
+				<div className="flex text-left justify-between items-center">
+					<div className="flex flex-col text-left">
+						<div className="flex">
+							<h1 className="font-bold tracking-wide text-lebowski text-3xl sm:text-4xl">Ask The Dude</h1>
+						</div>
+						<div className="flex">
+							<h2 className="font-medium tracking-wide text-white text-sm sm:text-md">A Chat-GPT Bot</h2>
+						</div>
+					</div>
+
+					<div className="flex gap-3 justify-end">🎳</div>
 				</div>
-				<div className="flex justify-center">
-					<h2 className="font-medium tracking-wide text-white text-lg sm:text-2xl">A Chat-GPT Bot</h2>
-				</div>
-				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 justify-center mt-8">
+				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 justify-center mt-6">
 					<img
 						className="rounded-md mx-auto sm:mx-none w-48 sm:w-full"
 						src="https://media0.giphy.com/media/hzrvwvnbgIV6E/giphy.gif?cid=ecf05e47i5030s2u857ucu7atwf99lsm7uqkpqxdh2i4nhia&rid=giphy.gif&ct=g"
@@ -55,9 +61,9 @@ export default function Home() {
 						) : (
 							<div className="px-6 py-8">
 								<div className="text-white mb-2">
-									<h3 className="font-semibold leading-tight tracking-wide text-white text-2xl">The Dude:</h3>
+									<h3 className="font-bold leading-tight tracking-wide text-white text-lg">The Dude:</h3>
 								</div>
-								<div className="text-lebowski text-center">
+								<div className="text-lebowski text-md text-center">
 									<p>{apiOutput}</p>
 								</div>
 							</div>
@@ -95,7 +101,7 @@ export default function Home() {
 						<p>Ask</p>
 					)}
 				</button>
-				<div className="flex gap-4 text-left justify-between mt-8 items-center">
+				<div className="flex text-left justify-between mt-6 pb-6 items-center">
 					<span className="text-lebowski text-xs">
 						Powered by&nbsp;
 						<a target="_blank" rel="noreferrer" href="https://openai.com/" className="hover:text-lebowski/60">
