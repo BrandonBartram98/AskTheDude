@@ -12,6 +12,9 @@ module.exports = {
 			backgroundImage: {
 				dude: "url('/thedude.jpeg')",
 			},
+			border: {
+				DEFAULT: '1px',
+			},
 		},
 	},
 	plugins: [],
