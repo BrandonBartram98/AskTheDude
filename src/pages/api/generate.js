@@ -1,5 +1,8 @@
 import { Configuration, OpenAIApi } from 'openai'
 
+if (!process.env.OPENAI_API_KEY) {
+	throw new Error('Missing API-Key from OpenAI')
+}
 const configuration = new Configuration({
 	apiKey: process.env.OPENAI_API_KEY,
 })
@@ -10,7 +13,6 @@ const basePromptPrefix = `
 Talk to me like you are the character 'The Dude' from the film 'The Big Lebowski'
 `
 const generateAction = async (req, res) => {
-	// Run first prompt
 	console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
 
 	const baseCompletion = await openai.createCompletion({
