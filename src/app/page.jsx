@@ -68,24 +68,94 @@ export default function Home() {
 					/>
 				</div>
 				<button
+					disabled
 					onClick={callGenerateEndpoint}
-					className="flex w-full bg-lebowski hover:bg-lebowski/60 transition-colors rounded-md justify-center mt-2 py-2 px-3 text-center"
+					className="flex w-full bg-lebowski disabled:text-white disabled:bg-lebowski/30 enabled:hover:bg-lebowski/60 transition-colors rounded-md justify-center mt-2 py-2 px-3 text-center"
 				>
 					{isGenerating ? (
 						<span className="loader">
-							<svg className="h-6 w-6 animate-spin stroke-black" viewBox="0 0 256 256">
-								<line x1="128" y1="32" x2="128" y2="64" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
-								<line x1="195.9" y1="60.1" x2="173.3" y2="82.7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
-								<line x1="224" y1="128" x2="192" y2="128" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
-								<line x1="195.9" y1="195.9" x2="173.3" y2="173.3" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
-								<line x1="128" y1="224" x2="128" y2="192" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
-								<line x1="60.1" y1="195.9" x2="82.7" y2="173.3" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
-								<line x1="32" y1="128" x2="64" y2="128" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
-								<line x1="60.1" y1="60.1" x2="82.7" y2="82.7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="24"></line>
+							<svg
+								className="h-6 w-6 animate-spin stroke-black"
+								viewBox="0 0 256 256"
+							>
+								<line
+									x1="128"
+									y1="32"
+									x2="128"
+									y2="64"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="24"
+								></line>
+								<line
+									x1="195.9"
+									y1="60.1"
+									x2="173.3"
+									y2="82.7"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="24"
+								></line>
+								<line
+									x1="224"
+									y1="128"
+									x2="192"
+									y2="128"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="24"
+								></line>
+								<line
+									x1="195.9"
+									y1="195.9"
+									x2="173.3"
+									y2="173.3"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="24"
+								></line>
+								<line
+									x1="128"
+									y1="224"
+									x2="128"
+									y2="192"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="24"
+								></line>
+								<line
+									x1="60.1"
+									y1="195.9"
+									x2="82.7"
+									y2="173.3"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="24"
+								></line>
+								<line
+									x1="32"
+									y1="128"
+									x2="64"
+									y2="128"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="24"
+								></line>
+								<line
+									x1="60.1"
+									y1="60.1"
+									x2="82.7"
+									y2="82.7"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="24"
+								></line>
 							</svg>
 						</span>
 					) : (
-						<p>Ask</p>
+						<p>
+							DISABLED - OpenAI trial limit reached, The Dude will return...
+						</p>
 					)}
 				</button>
 				<Footer />
